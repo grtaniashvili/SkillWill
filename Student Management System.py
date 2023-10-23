@@ -4,7 +4,7 @@ class Person(ABC):
     @property
     @abstractclassmethod
     def display_details(self):
-        self
+        pass
 
 class Grade_Exception(Exception):
     """
