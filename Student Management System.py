@@ -46,7 +46,7 @@ class StudentManagementSystem:
         self.id = 0 
 
     def add_student(self,student_id, name, grades):
-        if student_id in self.students.keys():
+        if student_id in self.students:
             print(f"Student with ID: {student_id} is already exists")
         else:
             new_student = Student(student_id, name, grades)
