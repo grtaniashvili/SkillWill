@@ -7,7 +7,7 @@ create table #test (
 --
 declare @i int = 0, @stime datetime, @etime datetime
 --
-while @i < 1000000
+while @i < 10000000
 begin
 	insert into #test (num) values (@i)
 	set @i += 1
@@ -17,7 +17,8 @@ set @stime = GETDATE()
 --
 select num
 from #test
-where cast(num an varchar(10)) like '
+where num %5 = 1
+--
 set @etime = GETDATE()
 --
 select datediff(SS,@stime,@etime)
