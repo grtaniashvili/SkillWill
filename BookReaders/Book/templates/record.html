@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+
+
+<div class="card">
+  <div class="card-header"><strong>
+    	{{ customer_record.Book_name }}
+		{{ customer_record.Book_author }}</strong>
+  </div>
+  <div class="card-body">
+
+
+
+
+
+  </div>
+</div>
+
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+<a href="{% url 'delete_book' customer_record.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'update_book' customer_record.id %}" class="btn btn-danger">Update</a>
+</body>
+</html>

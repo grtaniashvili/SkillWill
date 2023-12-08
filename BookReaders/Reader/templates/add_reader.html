@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reader</title>
+</head>
+<body>
+<div class="col-md-6 offset-md-3">
+<h1>Reader</h1>
+<br/>
+
+<form method="POST" action="{% url 'home' %}">
+	{% csrf_token %}
+
+    {{ form.as_p }}
+
+
+<br/>
+<button type="submit" class="btn btn-secondary">Sign In</button>
+
+</form>
+
+</div>
+</body>
+</html>
