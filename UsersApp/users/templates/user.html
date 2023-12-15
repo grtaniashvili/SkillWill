@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+
+
+<div class="card">
+  <div class="card-header"><strong>
+    	{{ customer_record.username }}
+		{{ customer_record.email }}
+        {{ customer_record.first_name }}
+        {{ customer_record.last_name }}</strong>
+  </div>
+  <div class="card-body">
+
+
+
+
+
+  </div>
+</div>
+
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+<a href="{% url 'delete_user' customer_record.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'update_user' customer_record.id %}" class="btn btn-danger">Update</a>
+</body>
+</html>

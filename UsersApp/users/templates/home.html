@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Data</title>
+
+</head>
+<a href="{% url 'add_user'%}"  class="btn btn-primary btn-xs aligned">Add User</a>
+<body>
+<table class="table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr align="Center">
+    <th scope="col">ID</th>
+      <th scope="col">UserName</th>
+      <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for record in users %}
+
+		<tr align="Center">
+			<td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
+			<td>{{ record.username }}</td>
+			<td>{{ record.first_name }}</td>
+        <td>{{ record.last_name }}</td>
+        <td>{{ record.email }}</td>
+		</tr>
+	{% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
